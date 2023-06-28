@@ -1,14 +1,14 @@
-<div class="border">
-    <div id="background">
-        <div class="inf">
+<div class="border2">
+    <div id="background2">
+        <div class="inf2">
             <h3>{{pokemon.name}}</h3>
             <p>{{pokemon.type}}</p>
         </div>
-        <div id="image">
+        <div id="image2">
             <img src="{{pokemon.spriteUrl}}" alt="{{pokemon.name}}">
         </div>
-        <div class="stats-container">
-            <div class="stats">
+        <div class="stats-container2">
+            <div class="stats2">
                 <p *ngFor="let stat of pokemon.stats">{{stat.stat.name}}: <span>{{stat.base_stat}}</span></p>
             </div>
         </div>

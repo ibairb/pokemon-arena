@@ -66,41 +66,41 @@
     margin: 0 10px;
   }
   
-  .stats span {
+  .stats2 span {
     color: #e1e1e1;
   }
   
-  .water {
+  .water2 {
     background: linear-gradient(to bottom right, #70b0ef, #85d7e9);
   }
   
-  .waterImg {
+  .waterImg2 {
     background: url("src/assets\img\angel_323599.jpg");
   }
   
-  .grass {
+  .grass2 {
     background: linear-gradient(to bottom right, #8bbf4c, #c4d946);
   }
   
-  .grassImg {
+  .grassImg2 {
     background: url("src/assets\img\fondo-hierba.png");
   }
   
-  .rock {
+  .rock2 {
     background: linear-gradient(to bottom right, #d49e6d, #f0d4a8);
   }
   
-  .rockImg {
+  .rockImg2 {
     background: url("src/assets\img\Túnel_Roca_HGSS.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
   
-  .electric {
+  .electric2 {
     background: linear-gradient(to bottom right, #fed758, #ffd866);
   }
   
-  .electricImg {
+  .electricImg2 {
     background: url("src/assets\img\fondo-hierba.png");
   }
   
