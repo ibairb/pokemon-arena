@@ -1,0 +1,18 @@
+<form #myForm>
+    <div>
+        <label for="buscarPokemon">{{player.playerName}}</label>
+        <input id="buscarPokemon" type="text" [(ngModel)]="pokemonName" name="pokemon" placeholder="Busca un Pokémon">
+        <button type="submit" (click)="handleSubmit('player1')">Buscar Pokémon</button>
+        <app-choose-pokemon *ngIf="pokemon" [pokemon]="pokemon" [player]="player"></app-choose-pokemon>
+        <app-poke-card *ngIf="pokemon" [pokemon]="pokemon"></app-poke-card>
+    </div>
+
+    <div *ngIf="numeroJugadores > 0">
+        <label for="buscarPokemon2">{{player2.playerName}}</label>
+        <input id="buscarPokemon2" type="text" [(ngModel)]="pokemonName2" name="pokemon2"
+            placeholder="Busca un Pokémon">
+        <button type="submit" (click)="handleSubmit('player2')">Buscar Pokémon</button>
+        <app-choose-pokemon *ngIf="pokemon2" [pokemon]="pokemon2" [player2]="player2"></app-choose-pokemon>
+        <app-poke-card2 *ngIf="pokemon2" [pokemon]="pokemon2"></app-poke-card2>
+    </div>
+</form>

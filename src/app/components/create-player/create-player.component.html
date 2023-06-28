@@ -1,0 +1,12 @@
+<form (submit)="handleSubmit()">
+    <div>
+      <label for="player1">Player 1</label>
+      <input type="text" name="player1" [(ngModel)]="playerName">
+    </div>
+    <div *ngIf="numeroJugadores > 0">
+      <label for="player2">Player 2</label>
+      <input type="text" name="player2" [(ngModel)]="playerName2">
+    </div>
+    <button type="submit" (click)="handleClick()">Aceptar</button>
+  </form>
+  

@@ -1,0 +1,60 @@
+.selectPlayersContainer {
+  height: 200px;
+  display: flex;
+  position: absolute;
+  top: 62%;
+  left: 47%;
+}
+
+.players {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 50px;
+}
+
+.player{
+  border: none;
+  background-color: transparent;
+}
+
+.player:hover {
+  cursor: pointer;
+}
+
+.selected {
+    animation: shine 1s infinite;
+    list-style-type: disclosure-closed;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #000;
+  }
+  
+  @keyframes shine {
+    0% {
+      opacity: 1;
+
+    }
+    50% {
+      opacity: 0.5;
+      color: red;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.image-select {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  width: 700px;
+  height: auto;
+  z-index: -1;
+}
+
+.image-select img {
+  width: 100%;
+  height: auto;
+}

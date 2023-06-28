@@ -1,0 +1,10 @@
+<div class="selectPlayersContainer">
+    <div class="players" (keydown)="onKeyDown($event)">
+        <button class="player" *ngFor="let player of players; let i = index" [class.selected]="i === selectedIndex" (click)="handleClick(i)">
+            {{ player }}
+        </button>
+    </div>
+</div>
+<div class="image-select">
+    <img src="../../../assets/img/chatbox.png" alt="chatbox">
+</div>

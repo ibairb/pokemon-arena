@@ -1,0 +1,106 @@
+.border {
+    margin: 20px;
+    height: 600px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #ffdb4e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 6px #e1e1e1;
+  }
+  
+  .background {
+    height: 570px;
+    width: 370px;
+    border-radius: 15px;
+    background: linear-gradient(to bottom right, #f6d3b5, #f86940);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .inf {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Press Start 2P", cursive;
+  }
+  
+  .image {
+    width: 300px;
+    height: 250px;
+    border-radius: 15px;
+    border: 5px solid #ffdb4e;
+    background: url("src/assets\img\fondo-hierba.png");
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .image img {
+    transform: scale(2.5);
+    max-height: 100%;
+    max-width: 100%;
+    transform-origin: bottom center;
+    object-fit: contain;
+  }
+  
+  .stats-container {
+    padding-top: 5px;
+  }
+  
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .stats p {
+    border-bottom: 2px solid #ffdb4e;
+    font-size: 13px;
+    padding: 10px 0;
+    margin: 0 10px;
+  }
+  
+  .stats span {
+    color: #e1e1e1;
+  }
+  
+  .water {
+    background: linear-gradient(to bottom right, #70b0ef, #85d7e9);
+  }
+  
+  .waterImg {
+    background: url("src/assets\img\angel_323599.jpg");
+  }
+  
+  .grass {
+    background: linear-gradient(to bottom right, #8bbf4c, #c4d946);
+  }
+  
+  .grassImg {
+    background: url("src/assets\img\fondo-hierba.png");
+  }
+  
+  .rock {
+    background: linear-gradient(to bottom right, #d49e6d, #f0d4a8);
+  }
+  
+  .rockImg {
+    background: url("src/assets\img\Túnel_Roca_HGSS.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .electric {
+    background: linear-gradient(to bottom right, #fed758, #ffd866);
+  }
+  
+  .electricImg {
+    background: url("src/assets\img\fondo-hierba.png");
+  }
+  
