@@ -21,8 +21,8 @@ export class PokeCard2Component implements OnInit, OnChanges {
     const card = document.getElementById('background2')
     const image = document.getElementById('image2')
     const pokemonType = this.pokemon.type
-    this.renderer.setAttribute(card, 'class', `background ${pokemonType}2`);
-    this.renderer.setAttribute(image, 'class', `image ${pokemonType}Img2`);
+    this.renderer.setAttribute(card, 'class', `background2 ${pokemonType}2`);
+    this.renderer.setAttribute(image, 'class', `image2 ${pokemonType}Img2`);
     
   }
 
