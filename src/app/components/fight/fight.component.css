@@ -1,0 +1,60 @@
+.players-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.pokemon-container {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+.player-container {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+.pokemon2-container {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.player2-container {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.pokeballs img {
+  width: 25px;
+}
+
+.pokemon {
+  width: 200px;
+  height: auto;
+}
+
+.moves-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 40%;
+  row-gap: 30px;
+}
+
+.moves-button {
+  background-color: transparent;
+  width: 60%;
+  align-self: center;
+  justify-self: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 20px;
+  border-radius: 15px;
+}
+
+.progress-bar-2 {
+  width: 100%;
+  height: 20px;
+  border-radius: 15px;
+}

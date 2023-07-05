@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, map } from 'rxjs';
+import { Router } from '@angular/router';
+import { Observable, map, tap } from 'rxjs';
 import { Player } from 'src/app/models/player';
 import { Pokemon } from 'src/app/models/pokemon';
 import { NumeroJugadoresService } from 'src/app/services/numero-jugadores.service';
@@ -23,13 +24,14 @@ export class FormComponent implements OnInit {
   constructor(
     private pokemonService: PokemonService,
     private numeroJugadoresService: NumeroJugadoresService,
-    private playerService: PlayerService
+    private playerService: PlayerService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
     this.numeroJugadores = this.numeroJugadoresService.numeroJugadores;
-    this.player = this.playerService.player
-    this.player2 = this.playerService.player2
+    this.player = this.playerService.player;
+    this.player2 = this.playerService.player2;
   }
 
   handleSubmit(player: string): void {
@@ -54,17 +56,25 @@ export class FormComponent implements OnInit {
       },
       error: (err) => {},
       complete: () => {},
-    })
+    });
   }
 
   getPokemonData(name: string): Observable<any> {
-    return this.pokemonService.getPokemon(name).pipe(
-      map((res: any) => ({
-        name: res.name,
-        type: res.types[0].type.name,
-        stats: res.stats.slice(0, 6),
-        spriteUrl: res.sprites.front_default,
-      }))
-    );
+    return this.pokemonService
+      .getPokemon(name)
+      .pipe(
+        map((res: any) => ({
+          name: res.name,
+          type: res.types[0].type.name,
+          stats: res.stats.slice(0, 6),
+          moveUrls: res.moves.slice(0, 4).map((move: any) => move.move.url),
+          moveName: res.moves.slice(0, 4).map((move: any) => move.move.name),
+          spriteUrl: res.sprites.front_default,
+        }))
+      )
+  }
+
+  navigate() {
+    this.router.navigate(['fight']);
   }
 }

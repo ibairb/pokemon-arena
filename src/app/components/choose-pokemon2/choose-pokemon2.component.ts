@@ -4,18 +4,17 @@ import { Pokemon } from 'src/app/models/pokemon';
 import { ChoosePokemonService } from 'src/app/services/choose-pokemon.service';
 
 @Component({
-  selector: 'app-choose-pokemon',
-  templateUrl: './choose-pokemon.component.html',
-  styleUrls: ['./choose-pokemon.component.css'],
+  selector: 'app-choose-pokemon2',
+  templateUrl: './choose-pokemon2.component.html',
+  styleUrls: ['./choose-pokemon2.component.css']
 })
-export class ChoosePokemonComponent {
+export class ChoosePokemon2Component {
   @Input() pokemon: Pokemon;
-  @Input() player: Player;
+  @Input() player2: Player;
 
   constructor(private choosePokemonService: ChoosePokemonService) {}
 
   chosePokemon(pokemon: Pokemon, player: Player) {
     this.choosePokemonService.choosePokemon(pokemon, player);
-    
   }
 }

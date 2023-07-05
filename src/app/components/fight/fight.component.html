@@ -1,0 +1,48 @@
+<div class="seleccion-pokemon-player" *ngIf="!pokemonSelected">
+    <button *ngFor="let pokemon of player.pokemonArray"
+        (click)="selectPokemonClick($event, player)">{{pokemon.name}}</button>
+</div>
+
+<div class="seleccion-pokemon-player2" *ngIf="!pokemon2Selected">
+    <button *ngFor="let pokemon of player2.pokemonArray"
+        (click)="selectPokemonClick($event, player2)">{{pokemon.name}}</button>
+</div>
+
+
+<div class="players-container" *ngIf="pokemonSelected && pokemon2Selected">
+
+    <!-- Sección del jugador 1 -->
+
+    <div class="pokemon-container">
+            <progress class="progress-bar" [value]="actualPokemonHp" [max]="pokemonHp"></progress>
+        <img [src]="playerPokemonSelected.spriteUrl" alt="pokemon sprite" class="pokemon">
+    </div>
+
+    <div class="player-container">
+        <h2>{{player.playerName}}</h2>
+        <div class="pokeballs">
+            <img src="../../../assets/img/pokeball.png" alt="pokeball" *ngFor="let pokemon of player.pokemonArray">
+        </div>
+        <div class="moves-container" *ngIf="turn % 2 == 0">
+            <button class="moves-button" *ngFor="let move of playerPokemonSelected.moveName"
+                (click)="handleAttack($event, player)">{{move}}</button>
+        </div>
+    </div>
+
+    <!-- Sección del jugador 2 -->
+
+    <div class="pokemon2-container">
+            <progress class="progress-bar-2" [value]="actualPokemon2Hp" [max]="pokemon2Hp"></progress>
+        <img [src]="player2PokemonSelected.spriteUrl" alt="pokemon sprite" class="pokemon">
+    </div>
+    <div class="player2-container">
+        <h2>{{player2.playerName}}</h2>
+        <div class="pokeballs">
+            <img src="../../../assets/img/pokeball.png" alt="pokeball" *ngFor="let pokemon of player2.pokemonArray">
+        </div>
+        <div class="moves-container" *ngIf="turn % 2 != 0">
+            <button class="moves-button" *ngFor="let move of player2PokemonSelected.moveName"
+                (click)="handleAttack($event, player2)">{{move}}</button>
+        </div>
+    </div>
+</div>
