@@ -104,8 +104,8 @@ export class FightComponent implements OnInit, AfterViewInit {
     const index2 = this.player2PokemonSelected.moveName.indexOf(
       event.target.innerHTML
     );
-
-    if (player == this.player) {
+ 
+    if (player === this.player) {
       const power = this.playerPokemonSelected.power[index];
       this.actualPokemon2Hp = this.actualPokemon2Hp - power * 0.35;
       if (this.actualPokemon2Hp < 0) {

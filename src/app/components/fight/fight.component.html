@@ -21,7 +21,7 @@
     <div class="player-container">
         <h2>{{player.playerName}}</h2>
         <div class="pokeballs">
-            <img src="../../../assets/img/pokeball.png" alt="pokeball" *ngFor="let pokemon of player.pokemonArray">
+            <img src="../../../assets/img/pokeball.png" alt="pokeball" *ngFor="let pokemon of player.pokemonArray" [ngClass]="{'blackPokeball': pokemon.stats[0].base_stat === 0}">
         </div>
         <div class="moves-container" *ngIf="turn % 2 == 0">
             <button class="moves-button" *ngFor="let move of playerPokemonSelected.moveName"
